@@ -5,7 +5,7 @@ namespace MyBucketList.Api.Test.Helpers
 {
     public static class TestDbContextFactory
     {
-        public static AppDbContext CreateInMemoryDbContext(string databaseName = null)
+        public static AppDbContext CreateInMemoryDbContext(string? databaseName = null)
         {
             var options = new DbContextOptionsBuilder<AppDbContext>()
                 .UseInMemoryDatabase(databaseName ?? Guid.NewGuid().ToString())
@@ -15,7 +15,7 @@ namespace MyBucketList.Api.Test.Helpers
             return new AppDbContext(options);
         }
 
-        public static AppDbContext CreateSeededDbContext(string databaseName = null)
+        public static AppDbContext CreateSeededDbContext(string? databaseName = null)
         {
             var context = CreateInMemoryDbContext(databaseName);
 
