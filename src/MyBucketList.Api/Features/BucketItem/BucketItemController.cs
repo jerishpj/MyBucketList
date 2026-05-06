@@ -6,7 +6,7 @@ using MyBucketList.Api.Infrastructure.Data;
 namespace MyBucketList.Api.Features.BucketItem
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("v{version:apiVersion}/[controller]")]
     public class BucketItemController : ControllerBase
     {
         private readonly ILogger<BucketItemController> _logger;
